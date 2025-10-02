@@ -20,6 +20,20 @@ const Home = () => {
     return () => clearInterval(interval);
   }, [titles.length]);
 
+  const scrollToExperience = () => {
+    const experienceSection = document.getElementById('experience');
+    if (experienceSection) {
+      experienceSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToContact = () => {
+    window.scrollTo({ 
+      top: document.documentElement.scrollHeight, 
+      behavior: 'smooth' 
+    });
+  };
+
   const socialLinks = [
     { icon: FaGithub, href: 'https://github.com/Gauravmadhukarkhandekar', label: 'GitHub' },
     { icon: FaLinkedin, href: 'https://www.linkedin.com/in/gaurav-khandekar-943743169/', label: 'LinkedIn' },
@@ -94,6 +108,7 @@ const Home = () => {
             className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8"
           >
             <motion.button
+              onClick={scrollToExperience}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-3 bg-gradient-to-r from-primary-500 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-primary-500/25 transition-all duration-300"
@@ -101,6 +116,7 @@ const Home = () => {
               View My Work
             </motion.button>
             <motion.button
+              onClick={scrollToContact}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-3 border-2 border-primary-400 text-primary-400 rounded-full font-semibold hover:bg-primary-400 hover:text-white transition-all duration-300"
