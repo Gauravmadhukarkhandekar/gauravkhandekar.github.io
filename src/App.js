@@ -6,13 +6,16 @@ import Home from './components/Home';
 import About from './components/About';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
+import CodePlayground from './components/CodePlayground';
 import Resume from './components/Resume';
 import FloatingShapes from './components/FloatingShapes';
+import Starfield from './components/Starfield';
 import './index.css';
 
 function App() {
   return (
     <div className="min-h-screen dark-gradient-bg relative overflow-x-hidden">
+      <Starfield />
       <FloatingShapes />
       <Navigation />
       <main>
@@ -20,6 +23,7 @@ function App() {
         <About />
         <Experience />
         <Projects />
+        <CodePlayground />
         <Resume />
       </main>
       

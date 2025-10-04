@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { FaHome, FaUser, FaBriefcase, FaCode, FaFileAlt, FaTerminal } from 'react-icons/fa';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -10,7 +11,7 @@ const Navigation = () => {
       setIsScrolled(window.scrollY > 50);
       
       // Update active section based on scroll position
-      const sections = ['home', 'about', 'experience', 'projects', 'resume'];
+      const sections = ['home', 'about', 'experience', 'projects', 'playground', 'resume'];
       const scrollPosition = window.scrollY + 100;
       
       for (const section of sections) {
@@ -37,11 +38,12 @@ const Navigation = () => {
   };
 
   const navItems = [
-    { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About' },
-    { id: 'experience', label: 'Experience' },
-    { id: 'projects', label: 'Projects' },
-    { id: 'resume', label: 'Resume' }
+    { id: 'home', label: 'Home', icon: FaHome },
+    { id: 'about', label: 'About', icon: FaUser },
+    { id: 'experience', label: 'Experience', icon: FaBriefcase },
+    { id: 'projects', label: 'Projects', icon: FaCode },
+    { id: 'playground', label: 'Playground', icon: FaTerminal },
+    { id: 'resume', label: 'Resume', icon: FaFileAlt }
   ];
 
   return (
@@ -65,19 +67,23 @@ const Navigation = () => {
           
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
-                    activeSection === item.id
-                      ? 'text-primary-400 bg-primary-900/20'
-                      : 'text-gray-300 hover:text-white hover:bg-white/10'
-                  }`}
-                >
-                  {item.label}
-                </button>
-              ))}
+              {navItems.map((item) => {
+                const IconComponent = item.icon;
+                return (
+                  <button
+                    key={item.id}
+                    onClick={() => scrollToSection(item.id)}
+                    className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 flex items-center space-x-2 ${
+                      activeSection === item.id
+                        ? 'text-primary-400 bg-primary-900/20'
+                        : 'text-gray-300 hover:text-white hover:bg-white/10'
+                    }`}
+                  >
+                    <IconComponent className="text-sm" />
+                    <span>{item.label}</span>
+                  </button>
+                );
+              })}
             </div>
           </div>
           

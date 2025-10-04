@@ -8,57 +8,54 @@ const Projects = () => {
       id: 1,
       title: 'HomeSpace - Property Rental Platform',
       description: 'Created a Django-based web platform with advanced property search, roommate finder, and interactive maps, supporting 500+ property listings. Implemented property posting, filtered search, and user engagement features.',
-      image: '/api/placeholder/400/300',
+      image: '/homespace.jpg.webp',
       technologies: ['Django', 'Python', 'PostgreSQL', 'JavaScript', 'Maps API'],
       github: 'https://github.com/Gauravmadhukarkhandekar/homespace',
       live: null,
       category: 'web',
       featured: true,
-      date: 'March 2024'
     },
     {
       id: 2,
       title: 'The Navigator - Video Directions App',
       description: 'Developed a React + Java application providing videographic directions for unfamiliar environments, improving user wayfinding efficiency by 40%. Applied machine perception and multimodal data integration.',
-      image: '/api/placeholder/400/300',
+      image: '/Navigator.jpg.webp',
       technologies: ['React', 'Java', 'Machine Learning', 'Computer Vision'],
       github: 'https://github.com/Gauravmadhukarkhandekar/navigator',
       live: null,
       category: 'web',
       featured: true,
-      date: 'May 2022'
     },
     {
       id: 3,
       title: 'Detection of Offensive Text Content',
       description: 'Designed and trained 5 deep learning models for multilingual (English/Hindi) offensive content detection. Achieved 92% classification accuracy using BERT and BiLSTM for NLP.',
-      image: '/api/placeholder/400/300',
+      image: '/offencivetext.jpg.jpg',
       technologies: ['Python', 'BERT', 'BiLSTM', 'NLP', 'TensorFlow', 'Deep Learning'],
       github: 'https://github.com/Gauravmadhukarkhandekar/offensive-text-detection',
       live: null,
       category: 'ai',
       featured: true,
-      date: 'March 2022'
     },
     {
       id: 4,
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment processing, and admin dashboard.',
-      image: '/api/placeholder/400/300',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'AWS'],
-      github: 'https://github.com/Gauravmadhukarkhandekar/ecommerce',
-      live: 'https://ecommerce-demo.com',
-      category: 'web',
+      title: 'Detection of Heart Disease',
+      description: 'Developed a machine learning model to predict the likelihood of heart disease using patient health data (age, cholesterol, blood pressure, etc.). Implemented algorithms such as Logistic Regression and Random Forest on the UCI Heart Disease dataset, achieving high accuracy. Visualized feature importance and evaluation metrics, and deployed a simple web app for user interaction.',
+      image: '/Detection of Heart Disease.jpg.jpg',
+      technologies: ['Python', 'Machine Learning', 'Logistic Regression', 'Random Forest', 'UCI Dataset', 'Web App'],
+      github: 'https://github.com/Gauravmadhukarkhandekar/heart-disease-detection',
+      live: null,
+      category: 'ai',
       featured: false
     },
     {
       id: 5,
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
-      image: '/api/placeholder/400/300',
-      technologies: ['Vue.js', 'Socket.io', 'Express', 'PostgreSQL'],
-      github: 'https://github.com/Gauravmadhukarkhandekar/taskmanager',
-      live: 'https://taskmanager-demo.com',
+      title: 'Project Hub',
+      description: 'A collaborative platform built with Java, AngularJS, and MongoDB to help teams discover and manage projects efficiently. Features dashboards, search filters, GitHub integration, and personalized recommendations—boosting engagement and streamlining team workflows.',
+      image: '/projecthub.jpg.png',
+      technologies: ['Java', 'AngularJS', 'MongoDB', 'GitHub API', 'REST APIs'],
+      github: 'https://github.com/Gauravmadhukarkhandekar/projecthub',
+      live: null,
       category: 'web',
       featured: false
     },
@@ -128,16 +125,27 @@ const Projects = () => {
             >
               {/* Project image */}
               <div className="relative h-48 bg-gradient-to-br from-primary-500 to-purple-600 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-500/80 to-purple-600/80 flex items-center justify-center">
+                {project.image && project.image !== '/api/placeholder/400/300' ? (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      // Fallback to gradient if image fails to load
+                      e.target.style.display = 'none';
+                      e.target.nextSibling.style.display = 'flex';
+                    }}
+                  />
+                ) : null}
+                <div 
+                  className={`absolute inset-0 bg-gradient-to-br from-primary-500/80 to-purple-600/80 flex items-center justify-center ${
+                    project.image && project.image !== '/api/placeholder/400/300' ? 'hidden' : 'flex'
+                  }`}
+                >
                   <div className="text-6xl font-bold text-white opacity-20">
                     {project.title.charAt(0)}
                   </div>
                 </div>
-                {project.featured && (
-                  <div className="absolute top-4 right-4 bg-yellow-500 text-dark-900 px-3 py-1 rounded-full text-sm font-bold">
-                    Featured
-                  </div>
-                )}
               </div>
 
               {/* Project content */}
@@ -145,11 +153,6 @@ const Projects = () => {
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-primary-400 transition-colors">
                   {project.title}
                 </h3>
-                {project.date && (
-                  <p className="text-primary-400 text-sm mb-2 font-medium">
-                    {project.date}
-                  </p>
-                )}
                 <p className="text-gray-400 text-sm mb-4 line-clamp-3">
                   {project.description}
                 </p>
