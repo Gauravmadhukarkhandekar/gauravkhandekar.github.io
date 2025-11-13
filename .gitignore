@@ -1,3 +1,5 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
 # Dependencies
 node_modules/
 /.pnp
@@ -7,7 +9,7 @@ node_modules/
 /coverage
 
 # Production
-build/
+/build
 
 # Misc
 .DS_Store
@@ -41,4 +43,3 @@ pids
 
 # OS generated files
 Thumbs.db
-
