@@ -8,7 +8,7 @@ const Resume = () => {
   const handleDownload = () => {
     // Download the actual PDF file from public folder
     const link = document.createElement('a');
-    link.href = '/Gaurav_Khandekar_Resume (2).pdf';
+    link.href = '/Gaurav_khandekar_Resume (4).pdf';
     link.download = 'Gaurav_Khandekar_Resume.pdf';
     document.body.appendChild(link);
     link.click();
@@ -126,7 +126,7 @@ const Resume = () => {
               <h3 className="text-xl font-bold text-gray-800">Gaurav Khandekar - Resume</h3>
               <div className="flex items-center space-x-2">
                 <motion.a
-                  href="/Gaurav_Khandekar_Resume (2).pdf"
+                  href="/Gaurav_khandekar_Resume (4).pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1 }}
@@ -151,7 +151,7 @@ const Resume = () => {
             {/* PDF Viewer */}
             <div className="h-[70vh] w-full">
               <iframe
-                src="/Gaurav_Khandekar_Resume (2).pdf#toolbar=1&navpanes=1&scrollbar=1"
+                src="/Gaurav_khandekar_Resume (4).pdf#toolbar=1&navpanes=1&scrollbar=1"
                 className="w-full h-full border-0"
                 title="Gaurav Khandekar Resume"
               />
