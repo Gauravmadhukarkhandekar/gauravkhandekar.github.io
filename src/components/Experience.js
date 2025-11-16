@@ -76,26 +76,26 @@ const Experience = () => {
   };
 
   return (
-    <section id="experience" className="py-20 px-4 relative">
+    <section id="experience" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 relative">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12 md:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
             My <span className="bg-gradient-to-r from-primary-400 to-purple-400 bg-clip-text text-transparent">Journey</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto px-4">
             A timeline of my professional experience, education, and achievements
           </p>
         </motion.div>
 
         <div className="relative">
 
-          <div className="space-y-12">
+          <div className="space-y-8 sm:space-y-10 md:space-y-12">
             {experiences.map((exp, index) => (
               <motion.div
                 key={index}
@@ -110,16 +110,16 @@ const Experience = () => {
                 <div className="w-full max-w-4xl mx-auto">
                   <motion.div
                     whileHover={{ scale: 1.02, y: -5 }}
-                    className={`glass-effect rounded-xl p-6 border-l-4 ${getTypeColor(exp.type)} ${getTypeBg(exp.type)} hover:shadow-lg transition-all duration-300`}
+                    className={`glass-effect rounded-xl p-4 sm:p-6 border-l-4 ${getTypeColor(exp.type)} ${getTypeBg(exp.type)} hover:shadow-lg transition-all duration-300`}
                   >
                     <div className="flex items-center mb-4">
                       <div className={`p-3 bg-gradient-to-r ${exp.color} rounded-lg mr-4`}>
                         <exp.icon className="text-white text-xl" />
                       </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-white">{exp.title}</h3>
-                        <p className="text-primary-400 font-semibold">{exp.company}</p>
-                        <p className="text-gray-400 text-sm">{exp.period}</p>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-lg sm:text-xl font-bold text-white break-words">{exp.title}</h3>
+                        <p className="text-primary-400 font-semibold text-sm sm:text-base break-words">{exp.company}</p>
+                        <p className="text-gray-400 text-xs sm:text-sm">{exp.period}</p>
                       </div>
                     </div>
                     
@@ -127,14 +127,14 @@ const Experience = () => {
                       {Array.isArray(exp.description) ? (
                         <ul className="space-y-2">
                           {exp.description.map((point, index) => (
-                            <li key={index} className="text-gray-300 leading-relaxed flex items-start">
-                              <span className="text-primary-400 mr-2 mt-1">•</span>
-                              <span>{point}</span>
+                            <li key={index} className="text-sm sm:text-base text-gray-300 leading-relaxed flex items-start">
+                              <span className="text-primary-400 mr-2 mt-1 flex-shrink-0">•</span>
+                              <span className="break-words">{point}</span>
                             </li>
                           ))}
                         </ul>
                       ) : (
-                        <p className="text-gray-300 leading-relaxed">{exp.description}</p>
+                        <p className="text-sm sm:text-base text-gray-300 leading-relaxed">{exp.description}</p>
                       )}
                     </div>
                     
@@ -142,7 +142,7 @@ const Experience = () => {
                       {exp.technologies.map((tech, techIndex) => (
                         <span
                           key={techIndex}
-                          className="px-3 py-1 bg-white/10 text-white text-sm rounded-full"
+                          className="px-2 sm:px-3 py-1 bg-white/10 text-white text-xs sm:text-sm rounded-full break-words"
                         >
                           {tech}
                         </span>

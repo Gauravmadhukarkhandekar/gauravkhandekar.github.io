@@ -28,25 +28,25 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="py-20 px-4 relative">
+    <section id="about" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 relative">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12 md:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
             About <span className="bg-gradient-to-r from-primary-400 to-purple-400 bg-clip-text text-transparent">Me</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto px-4">
             I'm a passionate full-stack developer with a love for creating innovative solutions 
             and beautiful user experiences.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
           {/* Left side - About text */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -55,17 +55,17 @@ const About = () => {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <p className="text-lg text-gray-300 leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
               Hi Everyone! I'm <span className="text-primary-400 font-semibold">Gaurav Khandekar</span> 👋, a <span className="text-purple-400 font-semibold">Software Engineer</span> based in <span className="text-green-400 font-semibold">Seattle, Washington</span>.
             </p>
-            <p className="text-lg text-gray-300 leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
               I am a highly productive and efficient individual seeking a secure and professional 
               career in the <span className="text-blue-400 font-semibold">IT industry</span>. My preferred focus is on <span className="text-primary-400 font-semibold">software engineering</span>, <span className="text-yellow-400 font-semibold">DSA</span>, 
               <span className="text-pink-400 font-semibold">Artificial Intelligence</span>, <span className="text-orange-400 font-semibold">System Design</span>, <span className="text-cyan-400 font-semibold">System Architecture</span>, and <span className="text-red-400 font-semibold">problem solving</span>, 
               leveraging my skills and abilities in the field of software and technology to 
               provide the best managerial decisions that will enhance <span className="text-green-400 font-semibold">company productivity</span>.
             </p>
-            <p className="text-lg text-gray-300 leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
               I work across the stack with tools and technologies like <span className="text-blue-400 font-semibold">React.js</span>, <span className="text-green-400 font-semibold">Next.js</span>, 
               <span className="text-green-500 font-semibold">Node.js</span>, <span className="text-purple-400 font-semibold">ASP.NET Core</span>, <span className="text-green-600 font-semibold">MongoDB</span>, <span className="text-yellow-400 font-semibold">DynamoDB</span>, 
               <span className="text-orange-400 font-semibold">AWS S3</span>, <span className="text-cyan-400 font-semibold">CloudFormation</span>, 

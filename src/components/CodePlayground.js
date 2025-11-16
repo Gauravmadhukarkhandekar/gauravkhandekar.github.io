@@ -119,25 +119,25 @@ Thanks for visiting Gaurav's portfolio! 🎉`
   const activeDemoData = demos[activeDemo];
 
   return (
-    <section id="playground" className="py-20 px-4 relative">
+    <section id="playground" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 relative">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12 md:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
             Interactive <span className="bg-gradient-to-r from-primary-400 to-purple-400 bg-clip-text text-transparent">Code Playground</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto px-4">
             Explore live coding demos and interact with real code examples
           </p>
         </motion.div>
 
          <div className="max-w-7xl mx-auto">
-           <div className={`grid gap-8 transition-all duration-700 ease-in-out ${
+           <div className={`grid gap-4 sm:gap-6 md:gap-8 transition-all duration-700 ease-in-out ${
              output ? 'grid-cols-1 lg:grid-cols-2' : 'grid-cols-1 max-w-4xl mx-auto'
            }`}>
              {/* Code Editor */}
@@ -150,17 +150,17 @@ Thanks for visiting Gaurav's portfolio! 🎉`
              >
                <div className="glass-effect rounded-xl overflow-hidden">
                  {/* Header */}
-                 <div className="bg-dark-800 px-6 py-4 border-b border-gray-700">
-                   <div className="flex items-center justify-center">
-                     <div className="flex items-center space-x-3">
-                       <activeDemoData.icon className="text-primary-400" />
-                       <div className="text-center">
-                         <h3 className="text-white font-semibold">{activeDemoData.title}</h3>
-                         <p className="text-gray-400 text-sm">{activeDemoData.description}</p>
+                 <div className="bg-dark-800 px-4 sm:px-6 py-3 sm:py-4 border-b border-gray-700">
+                   <div className="flex items-center justify-between flex-wrap gap-2">
+                     <div className="flex items-center space-x-2 sm:space-x-3 flex-1 min-w-0">
+                       <activeDemoData.icon className="text-primary-400 flex-shrink-0" />
+                       <div className="text-center sm:text-left min-w-0 flex-1">
+                         <h3 className="text-white font-semibold text-sm sm:text-base break-words">{activeDemoData.title}</h3>
+                         {activeDemoData.description && (
+                           <p className="text-gray-400 text-xs sm:text-sm hidden sm:block">{activeDemoData.description}</p>
+                         )}
                        </div>
                      </div>
-                   </div>
-                   <div className="flex items-center justify-end mt-2">
                      <div className="flex items-center space-x-2">
                        <motion.button
                          onClick={copyCode}
@@ -169,7 +169,7 @@ Thanks for visiting Gaurav's portfolio! 🎉`
                          className="p-2 text-gray-400 hover:text-primary-400 transition-colors"
                          title="Copy Code"
                        >
-                         <FaCopy />
+                         <FaCopy className="text-sm sm:text-base" />
                        </motion.button>
                        <motion.button
                          onClick={resetCode}
@@ -178,7 +178,7 @@ Thanks for visiting Gaurav's portfolio! 🎉`
                          className="p-2 text-gray-400 hover:text-primary-400 transition-colors"
                          title="Reset Code"
                        >
-                         <FaUndo />
+                         <FaUndo className="text-sm sm:text-base" />
                        </motion.button>
                      </div>
                    </div>
@@ -189,7 +189,7 @@ Thanks for visiting Gaurav's portfolio! 🎉`
                    <textarea
                      value={code}
                      onChange={(e) => setCode(e.target.value)}
-                     className="w-full h-96 bg-dark-900 text-gray-100 p-6 font-mono text-sm resize-none focus:outline-none"
+                     className="w-full h-64 sm:h-80 md:h-96 bg-dark-900 text-gray-100 p-4 sm:p-6 font-mono text-xs sm:text-sm resize-none focus:outline-none"
                      placeholder="Write your code here..."
                    />
                    <div className="absolute top-2 right-2 bg-dark-800 text-gray-400 text-xs px-2 py-1 rounded">
@@ -198,14 +198,14 @@ Thanks for visiting Gaurav's portfolio! 🎉`
                  </div>
 
                  {/* Run Button */}
-                 <div className="bg-dark-800 px-6 py-4 border-t border-gray-700">
+                 <div className="bg-dark-800 px-4 sm:px-6 py-3 sm:py-4 border-t border-gray-700">
                    <div className="flex justify-center">
                      <motion.button
                        onClick={runCode}
                        disabled={isRunning}
                        whileHover={{ scale: 1.05 }}
                        whileTap={{ scale: 0.95 }}
-                       className={`flex items-center space-x-2 px-8 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                       className={`flex items-center space-x-2 px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold text-sm sm:text-base transition-all duration-300 ${
                          isRunning
                            ? 'bg-gray-600 text-gray-300 cursor-not-allowed'
                            : 'bg-gradient-to-r from-primary-500 to-purple-600 text-white hover:shadow-lg hover:shadow-primary-500/25'
@@ -233,14 +233,14 @@ Thanks for visiting Gaurav's portfolio! 🎉`
                    transition={{ duration: 0.6, ease: "easeOut" }}
                    className="glass-effect rounded-xl overflow-hidden"
                  >
-                   <div className="bg-dark-800 px-6 py-4 border-b border-gray-700">
+                   <div className="bg-dark-800 px-4 sm:px-6 py-3 sm:py-4 border-b border-gray-700">
                      <div className="flex items-center justify-center space-x-2">
                        <FaCode className="text-primary-400" />
-                       <h3 className="text-white font-semibold">Output</h3>
+                       <h3 className="text-white font-semibold text-sm sm:text-base">Output</h3>
                      </div>
                    </div>
-                   <div className="p-6">
-                     <div className="bg-dark-900 rounded-lg p-4 font-mono text-sm text-gray-100 whitespace-pre-wrap">
+                   <div className="p-4 sm:p-6">
+                     <div className="bg-dark-900 rounded-lg p-3 sm:p-4 font-mono text-xs sm:text-sm text-gray-100 whitespace-pre-wrap overflow-x-auto">
                        {output}
                      </div>
                    </div>

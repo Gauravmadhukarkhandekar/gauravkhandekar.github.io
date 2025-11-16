@@ -33,10 +33,10 @@ function App() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}
         viewport={{ once: true }}
-        className="bg-black py-8"
+        className="bg-black py-6 sm:py-8"
       >
-        <div className="text-center">
-          <p className="text-gray-300 text-sm mb-2">
+        <div className="text-center px-4">
+          <p className="text-gray-300 text-xs sm:text-sm mb-2">
             Designed and Developed by <span className="text-primary-400 font-semibold">Gaurav Khandekar</span>
           </p>
           <p className="text-gray-400 text-xs mb-4">
@@ -44,7 +44,7 @@ function App() {
           </p>
           
           {/* Social Links (GitHub removed as requested) */}
-          <div className="flex justify-center space-x-4">
+          <div className="flex justify-center space-x-4 sm:space-x-6">
             <motion.a
               href="https://www.linkedin.com/in/gaurav-khandekar-943743169/"
               target="_blank"

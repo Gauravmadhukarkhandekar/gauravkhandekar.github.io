@@ -184,8 +184,8 @@ const Home = () => {
   ];
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative px-4">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section id="home" className="min-h-screen flex items-center justify-center relative px-4 sm:px-6 py-20 sm:py-0">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
         {/* Left side - Text content */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -197,7 +197,7 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6"
           >
             Hi, I'm{' '}
             <span className="bg-gradient-to-r from-primary-400 to-purple-400 bg-clip-text text-transparent">
@@ -224,7 +224,7 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-gray-300 mb-8 min-h-[2.5rem] flex items-center"
+            className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-6 sm:mb-8 min-h-[2.5rem] flex items-center justify-center lg:justify-start"
           >
             <span className="bg-gradient-to-r from-primary-400 to-purple-400 bg-clip-text text-transparent">
               {displayText || 'F'}
@@ -242,7 +242,7 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-lg text-gray-400 mb-8 max-w-2xl"
+            className="text-base sm:text-lg text-gray-400 mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0"
           >
             I create beautiful, functional, and user-centered digital experiences. 
             Passionate about turning ideas into reality through code.
@@ -269,7 +269,7 @@ const Home = () => {
                 scale: isButtonHovering ? 1.05 : 1,
               }}
               transition={{ duration: 0.1, ease: "easeOut" }}
-              className="relative px-8 py-3 bg-gradient-to-r from-primary-500 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-primary-500/25 transition-all duration-300 overflow-hidden"
+              className="relative px-6 sm:px-8 py-2.5 sm:py-3 bg-gradient-to-r from-primary-500 to-purple-600 text-white rounded-full font-semibold text-sm sm:text-base hover:shadow-lg hover:shadow-primary-500/25 transition-all duration-300 overflow-hidden w-full sm:w-auto"
             >
               {/* Ripple effects */}
               {ripples.map(ripple => (
@@ -305,7 +305,7 @@ const Home = () => {
                 scale: isButtonHovering ? 1.05 : 1,
               }}
               transition={{ duration: 0.1, ease: "easeOut" }}
-              className="relative px-8 py-3 border-2 border-primary-400 text-primary-400 rounded-full font-semibold hover:bg-primary-400 hover:text-white transition-all duration-300 overflow-hidden"
+              className="relative px-6 sm:px-8 py-2.5 sm:py-3 border-2 border-primary-400 text-primary-400 rounded-full font-semibold text-sm sm:text-base hover:bg-primary-400 hover:text-white transition-all duration-300 overflow-hidden w-full sm:w-auto"
             >
               {/* Ripple effects */}
               {ripples.map(ripple => (
@@ -421,13 +421,13 @@ const Home = () => {
                 duration: 0.1,
                 ease: "easeOut"
               }}
-              className="relative w-80 h-96 rounded-xl overflow-hidden flex items-center justify-center"
+              className="relative w-64 h-80 sm:w-72 sm:h-96 md:w-80 md:h-96 rounded-xl overflow-hidden flex items-center justify-center mx-auto"
               style={{ 
                 transformStyle: 'preserve-3d',
                 perspective: '1000px'
               }}
             >
-              <div className="w-80 h-96 rounded-xl overflow-hidden relative">
+              <div className="w-full h-full rounded-xl overflow-hidden relative">
               <img 
                 src={`${process.env.PUBLIC_URL}/gaurav-photo.jpg.jpeg`} 
                 alt="Gaurav Khandekar" 
@@ -481,7 +481,7 @@ const Home = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
