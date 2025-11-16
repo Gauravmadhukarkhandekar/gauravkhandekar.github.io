@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const Projects = () => {
   const projects = [
@@ -8,9 +8,8 @@ const Projects = () => {
       id: 1,
       title: 'HomeSpace - Property Rental Platform',
       description: 'Created a Django-based web platform with advanced property search, roommate finder, and interactive maps, supporting 500+ property listings. Implemented property posting, filtered search, and user engagement features.',
-      image: '/homespace.jpg.webp',
+      image: `${process.env.PUBLIC_URL}/homespace.jpg.webp`,
       technologies: ['Django', 'Python', 'PostgreSQL', 'JavaScript', 'Maps API'],
-      github: 'https://github.com/Gauravmadhukarkhandekar/homespace',
       live: null,
       category: 'web',
       featured: true,
@@ -19,9 +18,8 @@ const Projects = () => {
       id: 2,
       title: 'The Navigator - Video Directions App',
       description: 'Developed a React + Java application providing videographic directions for unfamiliar environments, improving user wayfinding efficiency by 40%. Applied machine perception and multimodal data integration.',
-      image: '/Navigator.jpg.webp',
+      image: `${process.env.PUBLIC_URL}/Navigator.jpg.webp`,
       technologies: ['React', 'Java', 'Machine Learning', 'Computer Vision'],
-      github: 'https://github.com/Gauravmadhukarkhandekar/navigator',
       live: null,
       category: 'web',
       featured: true,
@@ -30,9 +28,8 @@ const Projects = () => {
       id: 3,
       title: 'Detection of Offensive Text Content',
       description: 'Designed and trained 5 deep learning models for multilingual (English/Hindi) offensive content detection. Achieved 92% classification accuracy using BERT and BiLSTM for NLP.',
-      image: '/offencivetext.jpg.jpg',
+      image: `${process.env.PUBLIC_URL}/offencivetext.jpg.jpg`,
       technologies: ['Python', 'BERT', 'BiLSTM', 'NLP', 'TensorFlow', 'Deep Learning'],
-      github: 'https://github.com/Gauravmadhukarkhandekar/offensive-text-detection',
       live: null,
       category: 'ai',
       featured: true,
@@ -41,9 +38,8 @@ const Projects = () => {
       id: 4,
       title: 'Detection of Heart Disease',
       description: 'Developed a machine learning model to predict the likelihood of heart disease using patient health data (age, cholesterol, blood pressure, etc.). Implemented algorithms such as Logistic Regression and Random Forest on the UCI Heart Disease dataset, achieving high accuracy. Visualized feature importance and evaluation metrics, and deployed a simple web app for user interaction.',
-      image: '/Detection of Heart Disease.jpg.jpg',
+      image: `${process.env.PUBLIC_URL}/Detection of Heart Disease.jpg.jpg`,
       technologies: ['Python', 'Machine Learning', 'Logistic Regression', 'Random Forest', 'UCI Dataset', 'Web App'],
-      github: 'https://github.com/Gauravmadhukarkhandekar/heart-disease-detection',
       live: null,
       category: 'ai',
       featured: false
@@ -52,9 +48,8 @@ const Projects = () => {
       id: 5,
       title: 'Project Hub',
       description: 'A collaborative platform built with Java, AngularJS, and MongoDB to help teams discover and manage projects efficiently. Features dashboards, search filters, GitHub integration, and personalized recommendations—boosting engagement and streamlining team workflows.',
-      image: '/projecthub.jpg.png',
+      image: `${process.env.PUBLIC_URL}/projecthub.jpg.png`,
       technologies: ['Java', 'AngularJS', 'MongoDB', 'GitHub API', 'REST APIs'],
-      github: 'https://github.com/Gauravmadhukarkhandekar/projecthub',
       live: null,
       category: 'web',
       featured: false
@@ -65,7 +60,6 @@ const Projects = () => {
       description: 'A responsive portfolio website built with modern web technologies and featuring smooth animations and dark mode.',
       image: '/api/placeholder/400/300',
       technologies: ['React', 'Tailwind CSS', 'Framer Motion', 'Vite'],
-      github: 'https://github.com/Gauravmadhukarkhandekar/portfolio',
       live: 'https://gauravkhandekar.github.io',
       category: 'web',
       featured: false
@@ -170,19 +164,8 @@ const Projects = () => {
                 </div>
 
                 {/* Action buttons */}
-                <div className="flex space-x-4">
-                  <motion.a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    className="flex items-center px-4 py-2 bg-dark-700 text-white rounded-lg hover:bg-primary-600 transition-colors duration-300"
-                  >
-                    <FaGithub className="mr-2" />
-                    Code
-                  </motion.a>
-                  {project.live && (
+                {project.live && (
+                  <div className="flex">
                     <motion.a
                       href={project.live}
                       target="_blank"
@@ -194,33 +177,14 @@ const Projects = () => {
                       <FaExternalLinkAlt className="mr-2" />
                       Live
                     </motion.a>
-                  )}
-                </div>
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}
         </motion.div>
 
-        {/* View more button */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="text-center mt-12"
-        >
-          <motion.a
-            href="https://github.com/Gauravmadhukarkhandekar"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center px-8 py-3 border-2 border-primary-400 text-primary-400 rounded-full font-semibold hover:bg-primary-400 hover:text-white transition-all duration-300"
-          >
-            <FaGithub className="mr-2" />
-            View More on GitHub
-          </motion.a>
-        </motion.div>
+        {/* View more button removed (GitHub link) */}
       </div>
     </section>
   );

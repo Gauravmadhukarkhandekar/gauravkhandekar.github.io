@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa';
 
 const Home = () => {
   const [displayText, setDisplayText] = useState('');
@@ -178,7 +178,6 @@ const Home = () => {
   }, [particles.length]);
 
   const socialLinks = [
-    { icon: FaGithub, href: 'https://github.com/Gauravmadhukarkhandekar', label: 'GitHub' },
     { icon: FaLinkedin, href: 'https://www.linkedin.com/in/gaurav-khandekar-943743169/', label: 'LinkedIn' },
     { icon: FaInstagram, href: 'https://www.instagram.com/gauravkhandekar_/?igsh=bm1zNjVpYThvOW5h&utm_source=qr#', label: 'Instagram' },
     { icon: FaEnvelope, href: 'mailto:gauravkhandekar007@gmail.com', label: 'Email' }
@@ -430,7 +429,7 @@ const Home = () => {
             >
               <div className="w-80 h-96 rounded-xl overflow-hidden relative">
               <img 
-                src="/gaurav-photo.jpg.jpeg" 
+                src={`${process.env.PUBLIC_URL}/gaurav-photo.jpg.jpeg`} 
                 alt="Gaurav Khandekar" 
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 onError={(e) => {

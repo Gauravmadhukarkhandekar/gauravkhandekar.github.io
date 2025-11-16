@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa';
 import Navigation from './components/Navigation';
 import Home from './components/Home';
 import About from './components/About';
@@ -43,19 +43,8 @@ function App() {
             Copyright © 2025
           </p>
           
-          {/* Social Links */}
+          {/* Social Links (GitHub removed as requested) */}
           <div className="flex justify-center space-x-4">
-            <motion.a
-              href="https://github.com/Gauravmadhukarkhandekar"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.2, y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              className="text-gray-400 hover:text-primary-400 transition-colors duration-300"
-              aria-label="GitHub"
-            >
-              <FaGithub size={20} />
-            </motion.a>
             <motion.a
               href="https://www.linkedin.com/in/gaurav-khandekar-943743169/"
               target="_blank"
