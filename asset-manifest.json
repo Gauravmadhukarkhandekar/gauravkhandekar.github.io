@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/gauravkhandekar.github.io/static/css/main.9c48e72f.css",
-    "main.js": "/gauravkhandekar.github.io/static/js/main.1083dddf.js",
+    "main.css": "/gauravkhandekar.github.io/static/css/main.1d84de85.css",
+    "main.js": "/gauravkhandekar.github.io/static/js/main.d2b8e48d.js",
     "static/js/535.d24c9cdd.chunk.js": "/gauravkhandekar.github.io/static/js/535.d24c9cdd.chunk.js",
     "index.html": "/gauravkhandekar.github.io/index.html",
-    "main.9c48e72f.css.map": "/gauravkhandekar.github.io/static/css/main.9c48e72f.css.map",
-    "main.1083dddf.js.map": "/gauravkhandekar.github.io/static/js/main.1083dddf.js.map",
+    "main.1d84de85.css.map": "/gauravkhandekar.github.io/static/css/main.1d84de85.css.map",
+    "main.d2b8e48d.js.map": "/gauravkhandekar.github.io/static/js/main.d2b8e48d.js.map",
     "535.d24c9cdd.chunk.js.map": "/gauravkhandekar.github.io/static/js/535.d24c9cdd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9c48e72f.css",
-    "static/js/main.1083dddf.js"
+    "static/css/main.1d84de85.css",
+    "static/js/main.d2b8e48d.js"
   ]
 }
