@@ -48,6 +48,20 @@ const Experience = () => {
     {
       type: 'achievement',
       icon: FaTrophy,
+      title: 'Project Lead – Visual Path Navigation',
+      company: 'International Journal of Scientific & Engineering Research (IJSER)',
+      period: 'Jan 2022 - May 2022',
+      description: [
+        'Led the development of a visual path navigation platform that guides users through unfamiliar environments using videographic directions.',
+        'Applied machine perception and multimodal data integration techniques to enhance human-environment interaction, aligning with HLS research priorities.',
+        'Integrated video-based navigation workflows that improved wayfinding efficiency and reduced confusion for first-time visitors in new locations.'
+      ],
+      technologies: ['Computer Vision', 'Machine Perception', 'Multimodal Data', 'React', 'Video Processing'],
+      color: 'from-amber-500 to-pink-500'
+    },
+    {
+      type: 'achievement',
+      icon: FaTrophy,
       title: 'AWS Cloud Architecture',
       company: 'BOW Platform',
       period: '2025',
