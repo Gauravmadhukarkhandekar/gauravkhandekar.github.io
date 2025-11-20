@@ -10,12 +10,14 @@ import CodePlayground from './components/CodePlayground';
 import Resume from './components/Resume';
 import FloatingShapes from './components/FloatingShapes';
 import Starfield from './components/Starfield';
+import Constellation from './components/Constellation';
 import './index.css';
 
 function App() {
   return (
     <div className="min-h-screen dark-gradient-bg relative overflow-x-hidden">
       <Starfield />
+      <Constellation />
       <FloatingShapes />
       <Navigation />
       <main>
