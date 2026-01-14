@@ -22,6 +22,26 @@ const Experience = () => {
     },
     {
       type: 'work',
+      icon: FaBriefcase,
+      title: 'Software Developer',
+      company: "Sam's Tavern - Seattle, Washington, United States · Remote",
+      period: 'Dec 2025 - Jan 2026 · 2 mos',
+      description: [
+        'Designed and developed a secure, staff-only inventory management system for a restaurant bar to track liquor bottle movement from storage to bar, replacing daily inventory counts with movement-based tracking and shift-level accountability.',
+        'Built a full-stack system using React, Node.js, and AWS with AWS Cognito authentication implementing role-based access control for bartender, manager, and admin roles.',
+        'Designed complete bottle lifecycle tracking and shift-based checkout/return workflows using Amazon DynamoDB for scalable, low-latency storage of inventory and movement data.',
+        'Implemented server-side pagination for large datasets including bottle movements, audit logs, and reports, enabling efficient data retrieval and management.',
+        'Added QR code–based bottle identification and scan-ready workflows to streamline inventory tracking operations.',
+        'Developed movement-based consumption prediction logic to identify most-used and least-used bottles, forecast depletion timelines, and suggest which bottles to restock and in what quantities.',
+        'Built reporting and analytics foundations to support restocking decisions and reduce inventory loss through data-driven insights.',
+        'Deployed backend services on AWS Lambda for serverless, auto-scaling execution and delivered the frontend globally using Amazon CloudFront for low-latency and highly available content delivery.',
+        'Achieved significant impact: reduced overstocking and stockouts, improved purchasing decisions, and increased operational visibility and accountability.'
+      ],
+      technologies: ['AWS Lambda', 'Algorithms', 'React', 'Node.js', 'AWS Cognito', 'Amazon DynamoDB', 'CloudFront', 'QR Codes', 'Serverless', 'Pagination', 'Analytics', 'Role-Based Access Control', 'Inventory Management'],
+      color: 'from-cyan-500 to-blue-600'
+    },
+    {
+      type: 'work',
       icon: FaCode,
       title: 'Full-Stack Developer',
       company: 'Elite Softwares - Pune, India',
