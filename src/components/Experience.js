@@ -9,7 +9,7 @@ const Experience = () => {
       icon: FaBriefcase,
       title: 'Software Engineer Intern',
       company: 'BOW - Redmond, WA',
-      period: 'Jun 2025 - Present',
+      period: 'Jun 2025 - Aug 2025',
       description: [
         'Architected and deployed a cloud-native distributed system leveraging AWS Amplify, ECS, Lambda (serverless), S3 buckets, DynamoDB, SQS, and caching strategies, ensuring 99.9% uptime and scalability for 50,000+ active users.',
         'Configured Application Load Balancer (ALB) with Lambda and API Gateway, integrated with CloudFormation (stack policies, Lambda stack deletion handling), CloudTrail, and CloudWatch for automated infrastructure provisioning, governance, monitoring, and compliance, enabling automatic horizontal scaling, low-latency performance, fault-tolerance, and reducing response times by 30% under peak traffic.',
