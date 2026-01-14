@@ -7,22 +7,6 @@ const Experience = () => {
     {
       type: 'work',
       icon: FaBriefcase,
-      title: 'Software Engineer Intern',
-      company: 'BOW - Redmond, WA',
-      period: 'Jun 2025 - Aug 2025',
-      description: [
-        'Architected and deployed a cloud-native distributed system leveraging AWS Amplify, ECS, Lambda (serverless), S3 buckets, DynamoDB, SQS, and caching strategies, ensuring 99.9% uptime and scalability for 50,000+ active users.',
-        'Configured Application Load Balancer (ALB) with Lambda and API Gateway, integrated with CloudFormation (stack policies, Lambda stack deletion handling), CloudTrail, and CloudWatch for automated infrastructure provisioning, governance, monitoring, and compliance, enabling automatic horizontal scaling, low-latency performance, fault-tolerance, and reducing response times by 30% under peak traffic.',
-        'Designed and deployed distributed content management workflows for admin/member portals, event scheduling, and newsletter integration, utilizing asynchronous messaging queues and in-memory caching to guarantee reliable, low-downtime delivery during high-traffic events.',
-        'Developed secure RESTful APIs with Node.js Express.js in backend and led frontend architecture using React.js, Tailwind CSS, and Framer Motion, integrating Stripe payments and Google Sign-In authentication, while reducing page load times by 30% and improving mobile user satisfaction by 25% for the Beats of Washington platform.',
-        'Implemented multi-layered security with Google OAuth, AWS Cognito JWT verification, and Role-Based Access Control (RBAC) for Admin/Member roles, ensuring secure authentication, authorized access, and protection against vulnerabilities.'
-      ],
-      technologies: ['AWS Amplify', 'ECS', 'Lambda', 'DynamoDB', 'SQS', 'CloudFormation', 'React.js', 'Node.js', 'Stripe', 'Google OAuth'],
-      color: 'from-primary-500 to-blue-600'
-    },
-    {
-      type: 'work',
-      icon: FaBriefcase,
       title: 'Software Developer',
       company: "Sam's Tavern - Seattle, Washington, United States · Remote",
       period: 'Dec 2025 - Jan 2026 · 2 mos',
@@ -39,6 +23,22 @@ const Experience = () => {
       ],
       technologies: ['AWS Lambda', 'Algorithms', 'React', 'Node.js', 'AWS Cognito', 'Amazon DynamoDB', 'CloudFront', 'QR Codes', 'Serverless', 'Pagination', 'Analytics', 'Role-Based Access Control', 'Inventory Management'],
       color: 'from-cyan-500 to-blue-600'
+    },
+    {
+      type: 'work',
+      icon: FaBriefcase,
+      title: 'Software Engineer Intern',
+      company: 'BOW - Redmond, WA',
+      period: 'Jun 2025 - Aug 2025',
+      description: [
+        'Architected and deployed a cloud-native distributed system leveraging AWS Amplify, ECS, Lambda (serverless), S3 buckets, DynamoDB, SQS, and caching strategies, ensuring 99.9% uptime and scalability for 50,000+ active users.',
+        'Configured Application Load Balancer (ALB) with Lambda and API Gateway, integrated with CloudFormation (stack policies, Lambda stack deletion handling), CloudTrail, and CloudWatch for automated infrastructure provisioning, governance, monitoring, and compliance, enabling automatic horizontal scaling, low-latency performance, fault-tolerance, and reducing response times by 30% under peak traffic.',
+        'Designed and deployed distributed content management workflows for admin/member portals, event scheduling, and newsletter integration, utilizing asynchronous messaging queues and in-memory caching to guarantee reliable, low-downtime delivery during high-traffic events.',
+        'Developed secure RESTful APIs with Node.js Express.js in backend and led frontend architecture using React.js, Tailwind CSS, and Framer Motion, integrating Stripe payments and Google Sign-In authentication, while reducing page load times by 30% and improving mobile user satisfaction by 25% for the Beats of Washington platform.',
+        'Implemented multi-layered security with Google OAuth, AWS Cognito JWT verification, and Role-Based Access Control (RBAC) for Admin/Member roles, ensuring secure authentication, authorized access, and protection against vulnerabilities.'
+      ],
+      technologies: ['AWS Amplify', 'ECS', 'Lambda', 'DynamoDB', 'SQS', 'CloudFormation', 'React.js', 'Node.js', 'Stripe', 'Google OAuth'],
+      color: 'from-primary-500 to-blue-600'
     },
     {
       type: 'work',
