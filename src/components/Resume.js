@@ -8,7 +8,7 @@ const Resume = () => {
   const handleDownload = () => {
     // Download the actual PDF file from public folder
     const link = document.createElement('a');
-    link.href = `${process.env.PUBLIC_URL}/Gaurav_Khandekar_Resume (2).pdf`;
+    link.href = `${process.env.PUBLIC_URL}/Gaurav_Khandekar_Resume.pdf`;
     link.download = 'Gaurav_Khandekar_Resume.pdf';
     document.body.appendChild(link);
     link.click();
@@ -126,7 +126,7 @@ const Resume = () => {
               <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-800 truncate flex-1 mr-2">Gaurav Khandekar - Resume</h3>
               <div className="flex items-center space-x-1 sm:space-x-2 flex-shrink-0">
                 <motion.a
-                  href={`${process.env.PUBLIC_URL}/Gaurav_Khandekar_Resume (2).pdf`}
+                  href={`${process.env.PUBLIC_URL}/Gaurav_Khandekar_Resume.pdf`}
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1 }}
@@ -151,7 +151,7 @@ const Resume = () => {
             {/* PDF Viewer */}
             <div className="h-[60vh] sm:h-[70vh] w-full flex-1 min-h-0">
               <iframe
-                src={`${process.env.PUBLIC_URL}/Gaurav_Khandekar_Resume (2).pdf#toolbar=1&navpanes=1&scrollbar=1`}
+                src={`${process.env.PUBLIC_URL}/Gaurav_Khandekar_Resume.pdf#toolbar=1&navpanes=1&scrollbar=1`}
                 className="w-full h-full border-0"
                 title="Gaurav Khandekar Resume"
               />
